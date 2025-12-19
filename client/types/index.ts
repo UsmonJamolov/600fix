@@ -14,6 +14,7 @@ export interface IProduct {
 	price: number
 	image: string
 	excerpt: string
+	description: string
 	imageKey: string
 	_id: string
 }

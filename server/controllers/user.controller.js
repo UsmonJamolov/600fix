@@ -27,7 +27,7 @@ class UserController {
 	async getProfile(req, res, next) {
 		try {
 			const user = await userModel.findById(req.params.id).select('-password')
-			return res.json({user})
+			return res.json({ user })
 		} catch (error) {
 			next(error)
 		}

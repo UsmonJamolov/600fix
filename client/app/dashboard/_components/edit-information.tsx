@@ -5,8 +5,8 @@ import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
 import { Edit2 } from 'lucide-react'
-import FullNameForm from '../_components/full-name.form'
-import EmailForm from '../_components/email-form'
+import FullNameForm from './full-name.form'
+import EmailForm from './email.form'
 
 const EditInformation = () => {
 	return (

@@ -28,7 +28,6 @@ export const emailSchema = z.object({
 	email: z.string().email({ message: 'Invalid email' }),
 })
 
-
 export const productSchema = z.object({
 	title: z.string().min(3, { message: 'Name must be at least 3 characters' }),
 	price: z.string(),
@@ -37,6 +36,10 @@ export const productSchema = z.object({
 	image: z.string(),
 	imageKey: z.string(),
 })
+
+export const updateProductSchema = z.object({ id: z.string() }).merge(productSchema)
+
+export const idSchema = z.object({ id: z.string() })
 
 export const passwordSchema = z
 	.object({
@@ -48,3 +51,11 @@ export const passwordSchema = z
 		message: 'Passwords do not match',
 		path: ['confirmPassword'],
 	})
+
+export const searchParamsSchema = z.object({
+	searchQuery: z.string().optional(),
+	filter: z.string().optional(),
+	category: z.string().optional(),
+	page: z.string().default('1'),
+	pageSize: z.string().default('6'),
+})

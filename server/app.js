@@ -31,3 +31,6 @@ const bootstrap = async () => {
 }
 
 bootstrap()
+
+// https://www.mongodb.com/try/download/community - Download MongoDB Community Server
+// https://www.mongodb.com/try/download/compass - Download MongoDB Compass

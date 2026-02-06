@@ -16,6 +16,7 @@ export const ourFileRouter = {
 			}
 			return { token }
 		})
+		// @ts-ignore
 		.onUploadComplete(async ({ file }) => {
 			return file
 		}),
